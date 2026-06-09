@@ -1,0 +1,21 @@
+# Environment secrets
+.env
+
+# State JSONs
+telegram_subscribers.json
+alerted_options.json
+
+# Local test outputs / logs
+script_output.txt
+*.log
+
+# Python cache & virtual environments
+__pycache__/
+*.pyc
+venv/
+.venv/
+env/
+
+# Operating system files
+.DS_Store
+Thumbs.db

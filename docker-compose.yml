@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  r3-alert-scanner:
+    build: .
+    container_name: r3-alert-scanner
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      # Persists telegram subscribers and alerted options locally
+      - ./telegram_subscribers.json:/app/telegram_subscribers.json
+      - ./alerted_options.json:/app/alerted_options.json
+    ports:
+      - "10000:10000"
